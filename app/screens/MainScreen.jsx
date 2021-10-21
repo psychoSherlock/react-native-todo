@@ -1,14 +1,17 @@
 import React from "react";
-import { View, StyleSheet, ImageBackground } from "react-native";
+import { View, StyleSheet, ImageBackground, ScrollView } from "react-native";
+import ToDoList from "../components/ToDoList";
 
 function MainScreen(props) {
   return (
-    <View>
-      <ImageBackground
-        source={require("../assets/images/work-bg.jpeg")}
-        style={styles.mainBg}
-      ></ImageBackground>
-    </View>
+    <ImageBackground
+      source={require("../assets/images/work-bg.jpeg")}
+      style={styles.mainBg}
+    >
+      <ScrollView>
+        <ToDoList />
+      </ScrollView>
+    </ImageBackground>
   );
 }
 
