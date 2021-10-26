@@ -13,3 +13,4 @@
 - Dynamic title for navigator appbar: add it as stackscreen options and then add that as props to the custom appbar
 - Pass data between screens: Add it as a parameter (this is cheeting actually) and then check if those paramers are passed to the header, if it is, do something
 - Re Rendering issue: use useEffect with route.params as condition so that it only happens when there is a parameter in route
+- Build app: [expo.dev](https://docs.expo.dev/versions/latest/config/app/#package)

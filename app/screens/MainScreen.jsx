@@ -5,10 +5,9 @@ import {
   View,
   Text,
   ImageBackground,
-  Button,
 } from "react-native";
 
-import { IconButton } from "react-native-paper";
+import { IconButton, TouchableRipple } from "react-native-paper";
 
 import { useFonts } from "@expo-google-fonts/inter";
 import AppLoading from "expo-app-loading";

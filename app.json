@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "firstApp",
+    "name": "To Do App",
     "slug": "firstApp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +13,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -22,7 +24,8 @@
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "softwareKeyboardLayoutMode": "pan"
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.psychosherlock.firstApp"
     },
     "web": {
       "favicon": "./app/assets/favicon.png"

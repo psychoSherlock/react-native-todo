@@ -13,7 +13,7 @@ function CreateToDo({ navigation, route }) {
   const handleAdd = () => {
     const validate = () => {
       if (!title || !disc) {
-        setmessage("Please add a title and discription");
+        setmessage("Both title and descrition are required");
         navigation.setParams({ save: false });
         return false;
       } else {
