@@ -5,6 +5,7 @@ import {
   View,
   Text,
   ImageBackground,
+  Animated,
 } from "react-native";
 
 import { IconButton, TouchableRipple } from "react-native-paper";
@@ -15,6 +16,21 @@ import AppLoading from "expo-app-loading";
 import colors from "../components/config/colors";
 
 export function ToDoList({ title, disc, deleteFun }) {
+  const opacity = useState(new Animated.Value(1))[0];
+
+  function fadeOut() {
+    Animated.timing(opacity, {
+      toValue: 0,
+      duration: 500,
+      useNativeDriver: true,
+    }).start();
+  }
+
+  // function deleteItem() {
+  //   fadeOut();
+  //   setTimeout(deleteFun, 550);
+  // }
+
   let [HeaderfontsLoaded] = useFonts({
     Oswald: require("../assets/fonts/Oswald.ttf"),
     Ubuntu: require("../assets/fonts/Ubuntu.ttf"),
@@ -24,7 +40,7 @@ export function ToDoList({ title, disc, deleteFun }) {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.doListItem}>
+      <Animated.View style={[styles.doListItem, { opacity: opacity }]}>
         <View>
           <Text style={styles.doTitle}>{title}</Text>
           <Text style={styles.doDisc}>{disc}</Text>
@@ -45,7 +61,7 @@ export function ToDoList({ title, disc, deleteFun }) {
             onPress={deleteFun}
           />
         </View>
-      </View>
+      </Animated.View>
     );
   }
 }

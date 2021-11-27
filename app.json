@@ -1,27 +1,25 @@
 {
   "expo": {
     "name": "To Do App",
-    "slug": "firstApp",
+    "slug": "firstapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./app/assets/splash.png",
+      "image": "./app/assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "softwareKeyboardLayoutMode": "pan",
